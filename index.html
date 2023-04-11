@@ -13,14 +13,25 @@
 <body>
   <!-- ============ HEADER =========== -->
   <header>
-    <div class="header">
-      <a class="main-logo" href="#"><img src="./assets/images/logo-bookmark.svg" alt=""></a>
+    <div class="container header">
+      <a class="main-logo" href="#">
+        <img class="main-logo-dark" src="./assets/images/logo-bookmark.svg" alt="">
+        <!-- <img class="main-logo-white" src="./assets/images/logo-bookmark-white.svg" alt=""> -->
+      </a>
+      <div class="toggle">
+        <img class="toggle__menu" src="./assets/images/icon-hamburger.svg" alt="">
+        <img class="toggle__close" src="./assets/images/icon-close.svg" alt="">
+      </div>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="" class="nav__link">Features</a></li>
           <li class="nav__item"><a href="" class="nav__link">Pricing</a></li>
           <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
-          <li class="btn btn--ghost nav__item"><a href="" class="nav__link">Login</a></li>
+          <li class="nav__item"><a href="" class="nav__link btn--login">Login</a></li>
+          <li class="nav__social-media">
+            <img src="./assets/images/icon-facebook.svg" alt="Facebook Logo">
+            <img src="./assets/images/icon-twitter.svg" alt="Twitter Logo">
+          </li>
         </ul>
       </nav>
     </div>

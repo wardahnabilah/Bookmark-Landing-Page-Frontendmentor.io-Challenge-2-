@@ -1,0 +1,73 @@
+@use '../abstract' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+
+    @include breakpoint-down(medium) {
+        background-color: $color-neutral-dark-blue-95;
+    }
+
+    .toggle {
+        display: none;
+
+        @include breakpoint-down(medium) {
+            display: block;
+            margin-left: auto;
+        }
+
+        &__menu {
+            @include breakpoint-down(medium) {
+                display: block;
+            } 
+        }
+
+        &__close {
+            @include breakpoint-down(medium) {
+                display: none;
+            }
+        }
+    }
+
+    .nav {
+        &__list {
+            display: flex;
+            align-items: center;
+            gap: 2.75rem;
+
+            @include breakpoint-down(medium) {
+                height: 100vh;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 6.5625rem;
+                left: 0;
+                right: 0;
+                background-color: $color-neutral-dark-blue-95;
+            }
+
+            .nav__item {
+                @include breakpoint-down(medium) {
+                    width: calc(100% - (2*9.5%));
+                    padding-block: 1.5rem;
+                    text-align: center;
+                    border-top: 1px solid $color-neutral-white-20;
+                }
+            }
+
+            .nav__social-media {
+                display: none;
+
+                @include breakpoint-down(medium) {
+                    display: flex;
+                    gap: 2.5rem;
+                    margin-top: auto;
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
