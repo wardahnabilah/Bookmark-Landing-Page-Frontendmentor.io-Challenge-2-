@@ -42,9 +42,11 @@ h4 {
     font-size: $fs-20;
     color: $color-neutral-white;
     text-transform: uppercase;
+    letter-spacing: 2px;
 
     @include breakpoint-up(medium) {
         font-size: $fs-13;
+        color: $color-neutral-dark-blue;
     }
 
     &--footer {

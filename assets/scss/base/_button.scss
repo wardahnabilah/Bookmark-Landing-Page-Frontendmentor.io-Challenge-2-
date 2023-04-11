@@ -1,7 +1,7 @@
 @use '../abstract' as *;
 
 .btn {
-    padding: 1em;
+    padding: 1em 1.25em;
     outline: none;
     border: 2px solid transparent;
     border-radius: 6px;
@@ -20,8 +20,18 @@
         background-color: $color-neutral-gray;
     }
 
-    &--ghost {
-        background-color: transparent;
-        border-color: $color-neutral-white;
+    &--login {
+        padding: 1em 2.5em;
+        background-color: $color-primary-red;
+        color: $color-neutral-white;
+        border-radius: 6px;
+
+        @include breakpoint-down(medium) {
+            display: block;
+            padding-block: 1.25em;
+            background-color: transparent;
+            border: 2px solid $color-neutral-white;
+            font-weight: $fw-medium;
+        }
     }
 }
