@@ -1,0 +1,27 @@
+@use '../abstract' as *;
+
+.btn {
+    padding: 1em;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+    &--primary-blue {
+        background-color: $color-primary-blue;
+        color: $color-neutral-white;
+    }
+
+    &--primary-red {
+        background-color: $color-primary-red;
+        color: $color-neutral-white;
+    }
+
+    &--secondary {
+        background-color: $color-neutral-gray;
+    }
+
+    &--ghost {
+        background-color: transparent;
+        border-color: $color-neutral-white;
+    }
+}
