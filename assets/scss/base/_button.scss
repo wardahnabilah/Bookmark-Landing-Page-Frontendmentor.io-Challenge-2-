@@ -1,10 +1,14 @@
 @use '../abstract' as *;
 
 .btn {
-    padding: 1em 1.25em;
+    padding: 1em;
     outline: none;
     border: 2px solid transparent;
     border-radius: 6px;
+
+    @include breakpoint-up(large) {
+        padding: 1em 1.625em;
+    }
 
     &--primary-blue {
         background-color: $color-primary-blue;
@@ -17,7 +21,9 @@
     }
 
     &--secondary {
-        background-color: $color-neutral-gray;
+        background-color: $color-neutral-white-gray;
+        color: $color-neutral-dark-gray;
+        box-shadow: 0 9px 6px -6px $color-neutral-gray-35; 
     }
 
     &--login {
@@ -26,7 +32,7 @@
         color: $color-neutral-white;
         border-radius: 6px;
 
-        @include breakpoint-down(medium) {
+        @include breakpoint-down(large) {
             display: block;
             padding-block: 1.25em;
             background-color: transparent;
