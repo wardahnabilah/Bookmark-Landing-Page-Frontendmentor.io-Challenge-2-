@@ -1,0 +1,24 @@
+@use '../abstract' as *;
+
+.container {
+    padding: 2.5rem clamp(2rem, 9%, 10.25rem);
+    
+    @include breakpoint-up(large) {
+        padding-top: 4.125rem;
+        padding-bottom: 5.625rem;
+    }
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.changeBgColor {
+    background-color: $color-neutral-dark-blue-95 !important;
+}

@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <!-- Stylesheet Link -->
   <link rel="stylesheet" href="./assets/css/main.css">
-  
+  <!-- Script Link -->
+  <script src="./assets/js/scripts.js" defer></script>
   <title>Frontend Mentor | Bookmark landing page</title>
 </head>
 <body>
@@ -16,14 +16,14 @@
     <div class="container header">
       <a class="main-logo" href="#">
         <img class="main-logo-dark" src="./assets/images/logo-bookmark.svg" alt="">
-        <!-- <img class="main-logo-white" src="./assets/images/logo-bookmark-white.svg" alt=""> -->
+        <img class="main-logo-white" data-navigation src="./assets/images/logo-bookmark-white.svg" alt="">
       </a>
       <div class="toggle">
         <img class="toggle__menu" src="./assets/images/icon-hamburger.svg" alt="">
-        <img class="toggle__close" src="./assets/images/icon-close.svg" alt="">
+        <img class="toggle__close" data-navigation src="./assets/images/icon-close.svg" alt="">
       </div>
       <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav__list" data-navigation>
           <li class="nav__item"><a href="" class="nav__link">Features</a></li>
           <li class="nav__item"><a href="" class="nav__link">Pricing</a></li>
           <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
@@ -41,17 +41,17 @@
   <main>
     <!-- ============ Hero Section =========== -->
     <section class="hero" id="hero">
-      <div class="hero__image">
-        <div class="image__bg"></div>
-        <img src="./assets/images/illustration-hero.svg" alt="Hero illustration">
-      </div>
-      <div class="hero__text">
-        <h1 class="hero__title">A Simple Bookmark Manager</h1>
-        <p class="hero__body">A clean and simple interface to organize your favourite websites. Open a new 
-          browser tab and see your sites load instantly. Try it for free.</p>
-        <div class="hero__button">
-          <button class="btn btn--primary-blue">Get it on Chrome</button>
-          <button class="btn btn--secondary">Get it on Firefox</button>
+        <div class="hero__image">
+          <div class="image__bg"></div>
+          <img src="./assets/images/illustration-hero.svg" alt="Hero illustration">
+        </div>
+        <div class="hero__text">
+          <h1 class="hero__title">A Simple Bookmark Manager</h1>
+          <p class="hero__body">A clean and simple interface to organize your favourite websites. Open a new 
+            browser tab and see your sites load instantly. Try it for free.</p>
+          <div class="hero__button">
+            <button class="btn btn--primary-blue">Get it on Chrome</button>
+            <button class="btn btn--secondary">Get it on Firefox</button>
         </div>
       </div>
     </section>
