@@ -2,10 +2,12 @@
 
 .container {
     padding: 2.5rem clamp(2rem, 9%, 10.25rem);
-    
+    text-align: center;
+
     @include breakpoint-up(large) {
         padding-top: 4.125rem;
         padding-bottom: 5.625rem;
+        text-align: left;
     }
 }
 

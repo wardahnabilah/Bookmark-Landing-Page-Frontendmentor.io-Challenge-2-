@@ -7,9 +7,7 @@
     overflow-x: hidden;
 
     @include breakpoint-up(large) {
-        // padding-top: 4.125rem;
         grid-template-columns: 1fr 1fr;
-        // align-items: center;
     }
 
     &__image {
@@ -49,16 +47,11 @@
     }
 
     &__text {
-        text-align: center;
         padding-bottom: 4.75rem;
 
         @include breakpoint-up(large) {
-            text-align: left;
             padding-top: 4.5rem;
-            // max-width: 85%;
-            // padding-top: 4.125rem;
-            // padding-bottom: 7.625rem;
-            // text-align: left;
+            max-width: 85%;
         }
     }
 
