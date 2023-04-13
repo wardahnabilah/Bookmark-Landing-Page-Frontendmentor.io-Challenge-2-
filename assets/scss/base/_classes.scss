@@ -10,6 +10,12 @@
     }
 }
 
+.container-intro {
+    width: min(100%, 34rem);
+    margin-inline: auto;
+    padding-bottom: 1.25rem;
+}
+
 .hide {
     opacity: 0;
     pointer-events: none;
