@@ -1,0 +1,58 @@
+@use '../abstract' as *;
+
+.faq {
+    margin-bottom: 2.5rem;
+
+    &__intro {
+        @include breakpoint-up(large) {
+            padding-inline: 1rem;
+        }
+    }
+
+    &__list {
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        border-bottom: 1px solid $color-neutral-gray-35;
+    }
+
+    &__question {
+        padding-block: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-neutral-black-80;
+
+        @include breakpoint-up(large) {
+            &:hover {
+                color: $color-primary-red;
+                cursor: pointer;
+            }
+        }
+
+        .arrow-icon {
+            &.open {
+                transform: rotate(180deg);
+    
+                path {            
+                    stroke: $color-primary-red;
+                }
+            }   
+        }
+    }
+
+    &__answer {
+        width: 95%;
+        padding-top: .5rem;
+        font-size: $fs-14;
+        text-align: left;
+        line-height: 1.8rem;
+        color: $color-neutral-dark-gray;
+        display: none;
+
+        @include breakpoint-up(large) {
+            font-size: $fs-16;
+        }
+    }
+}

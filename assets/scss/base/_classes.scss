@@ -26,6 +26,10 @@
     pointer-events: auto !important;
 }
 
+.open {
+    display: block !important;
+}
+
 /* Change header background color */
 .changeBgColor {
     background-color: $color-neutral-dark-blue-95 !important;

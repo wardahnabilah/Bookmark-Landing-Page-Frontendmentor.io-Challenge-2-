@@ -44,3 +44,22 @@ featuresTab.forEach(tab => {
         })
     })
 })
+
+/*******************************************************************
+                            FAQ SECTION
+********************************************************************/
+
+const faqItems = document.querySelectorAll(".faq__question")
+
+// Add event listener to each faq question
+faqItems.forEach(item => {
+    item.addEventListener("click", () => {
+        const currentFaq = item.dataset.faq //which faq is being selected
+        const currentAnswer = document.querySelector(`.faq__answer[data-faq="${currentFaq}"]`) //select the current answer of that faq 
+        const arrowIcon = document.querySelector(`.arrow-icon[data-faq=${currentFaq}]`) //select the current arrow icon
+
+        //Show or hide the answer of that particular faq
+        currentAnswer.classList.toggle("open")
+        arrowIcon.classList.toggle("open")
+    })
+})
