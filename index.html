@@ -59,81 +59,93 @@
     </section>
 
     <!-- ============ Features Section =========== -->
-    <section class="features" id="features">
-      <div class="features__intro">
-        <h3>Features</h3>
-        <p>Our aim is to make it quick and easy for you to access your favourite websites. 
-          Your bookmarks sync between your devices so you can access them on the go.
-        </p>
-      </div>
-      <div class="features__menu">
-        <div class="features__item">Simple Bookmarking</div>
-        <div class="features__item">Speedy Searching</div>
-        <div class="features__item">Easy Sharing</div>
-      </div>
-      <div class="features__detail">
-        <div class="features__image">
-          <div class="image__bg"></div>
-          <img src="./assets/images/illustration-features-tab-1.svg" alt="">
-        </div>
-        <div class="features__text">
-          
-          <!-- Features' first tab -->
-          <h3>Bookmark in one click</h3>
-          <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
-            gives you complete control over how you manage your favourite sites.
+    <section id="features">
+      <div class="container features">
+        <div class="features__intro">
+          <h3>Features</h3>
+          <p>Our aim is to make it quick and easy for you to access your favourite websites. 
+            Your bookmarks sync between your devices so you can access them on the go.
           </p>
-
-          <!-- Features' second tab -->
-          <h3 style="display: none;">Intelligent search</h3>
-          <p style="display: none;">Our powerful search feature will help you find saved sites in no time at all. 
-            No need to trawl through all of your bookmarks.
+        </div>
+        <div class="features__tab">
+          <div data-features-tab="first" class="features__item active">Simple Bookmarking <div data-features-tab="first" class="red-line active"></div></div>
+          <div data-features-tab="second" class="features__item">Speedy Searching <div data-features-tab="second" class="red-line"></div></div>
+          <div data-features-tab="third" class="features__item">Easy Sharing <div data-features-tab="third" class="red-line"></div></div>
+        </div> 
+        <div class="features__detail">
+          <div class="features__detail-image">
+            <div class="image__bg image__bg--features"></div>
+            <div class="img-container">
+              <img data-features-tab="first" class="active" src="./assets/images/illustration-features-tab-1.svg" alt="">
+              <img data-features-tab="second" src="./assets/images/illustration-features-tab-2.svg" alt="">
+              <img data-features-tab="third" src="./assets/images/illustration-features-tab-3.svg" alt="">
+            </div>  
+          </div>
+          <div class="features__detail-text">
+            
+            <!-- Features' first tab -->
+            <div class="detail-item active" data-features-tab="first">
+              <h3>Bookmark in one click</h3>
+              <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                gives you complete control over how you manage your favourite sites.
+              </p>
+            </div>
+  
+            <!-- Features' second tab -->
+            <div class="detail-item" data-features-tab="second">
+              <h3>Intelligent search</h3>
+              <p>Our powerful search feature will help you find saved sites in no time at all. 
+                No need to trawl through all of your bookmarks.
+              </p>
+            </div>
+  
+            <!-- Features' third tab -->
+            <div class="detail-item" data-features-tab="third">
+              <h3>Share your bookmarks</h3>
+              <p>Easily share your bookmarks and collections with others. Create a shareable 
+                link that you can send at the click of a button.
+              </p>
+            </div>
+            <button class="btn btn--primary-blue btn--features">More Info</button>
+          </div>
+        </div>
+      </section>
+  
+      <!-- ============ Download the extension Section =========== -->
+      <section class="download" id="download">
+        <div class="download__intro">
+          <h3>Download the extension</h3>
+          <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+            got a favourite you’d like us to prioritize.
           </p>
-
-          <!-- Features' third tab -->
-          <h3 style="display: none;">Share your bookmarks</h3>
-          <p style="display: none;">Easily share your bookmarks and collections with others. Create a shareable 
-            link that you can send at the click of a button.
-          </p>
-          <button class="btn btn--primary-blue">More Info</button>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ Download the extension Section =========== -->
-    <section class="download" id="download">
-      <div class="download__intro">
-        <h3>Download the extension</h3>
-        <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-          got a favourite you’d like us to prioritize.
-        </p>
-      </div>
-      <div class="download__cards">
-        <!-- Chrome Card -->
-        <div class="card">
-          <img class="card__image" src="./assets/images/logo-chrome.svg" alt="Chrome Logo Image">
-          <h4 class="card__title">Add to Chrome</h4>
-          <p class="card__description">Minimum version 62</p>
-          <img src="./assets/images/bg-dots.svg" alt="">
-          <button class="btn btn--primary-blue">Add & Install Extension</button>
-        </div>
-
-        <!-- Firefox Card -->
-        <div class="card">
-          <img class="card__image" src="./assets/images/logo-firefox.svg" alt="Firefox Logo Image">
-          <h4 class="card__title">Add to Firefox</h4>
-          <p class="card__description">Minimum version 55</p>
-          <img src="./assets/images/bg-dots.svg" alt="">
-          <button class="btn btn--primary-blue">Add & Install Extension</button>
-        </div>
-
-        <!-- Opera Card -->
-        <div class="card">
-          <img class="card__image" src="./assets/images/logo-opera.svg" alt="Opera Logo Image">
-          <h4 class="card__title">Add to Opera</h4>
-          <p class="card__description">Minimum version 46</p>
-          <img src="./assets/images/bg-dots.svg" alt="">
-          <button class="btn btn--primary-blue">Add & Install Extension</button>
+        <div class="download__cards">
+          <!-- Chrome Card -->
+          <div class="card">
+            <img class="card__image" src="./assets/images/logo-chrome.svg" alt="Chrome Logo Image">
+            <h4 class="card__title">Add to Chrome</h4>
+            <p class="card__description">Minimum version 62</p>
+            <img src="./assets/images/bg-dots.svg" alt="">
+            <button class="btn btn--primary-blue">Add & Install Extension</button>
+          </div>
+  
+          <!-- Firefox Card -->
+          <div class="card">
+            <img class="card__image" src="./assets/images/logo-firefox.svg" alt="Firefox Logo Image">
+            <h4 class="card__title">Add to Firefox</h4>
+            <p class="card__description">Minimum version 55</p>
+            <img src="./assets/images/bg-dots.svg" alt="">
+            <button class="btn btn--primary-blue">Add & Install Extension</button>
+          </div>
+  
+          <!-- Opera Card -->
+          <div class="card">
+            <img class="card__image" src="./assets/images/logo-opera.svg" alt="Opera Logo Image">
+            <h4 class="card__title">Add to Opera</h4>
+            <p class="card__description">Minimum version 46</p>
+            <img src="./assets/images/bg-dots.svg" alt="">
+            <button class="btn btn--primary-blue">Add & Install Extension</button>
+          </div>
         </div>
       </div>
     </section>

@@ -7,7 +7,6 @@
     @include breakpoint-up(large) {
         padding-top: 4.125rem;
         padding-bottom: 5.625rem;
-        text-align: left;
     }
 }
 
@@ -16,11 +15,22 @@
     pointer-events: none;
 }
 
-.show {
+.show, .active {
     opacity: 1 !important;
     pointer-events: auto !important;
 }
 
+/* Change header background color */
 .changeBgColor {
     background-color: $color-neutral-dark-blue-95 !important;
+}
+
+/* Blue background behind image */
+.image__bg {
+    width: 100%;
+    height: clamp(12.5rem, 50vw, 21rem);
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    background-color: $color-primary-blue;
 }

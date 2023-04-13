@@ -14,7 +14,7 @@ body {
 h1, h2, h3, h4 {
     font-weight: $fw-medium;
     color: $color-neutral-dark-blue;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 
     @include breakpoint-up(large) {
         margin-bottom: 2.25rem;

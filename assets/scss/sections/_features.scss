@@ -1,0 +1,142 @@
+@use '../abstract' as *;
+
+.features {
+    &__intro {
+        width: min(100%, 34rem);
+        margin-inline: auto;
+        padding-bottom: 1.25rem;
+    }
+
+    &__tab {
+        display: grid;
+
+        @include breakpoint-up(large) {
+            width: 60%;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-inline: auto;
+        }
+
+        .features__item {
+            position: relative;
+            padding-block: 1.5rem;
+            border-bottom: 2px solid $color-neutral-gray-35;
+            font-size: $fs-16;
+
+            &:first-child {
+                border-top: 2px solid $color-neutral-gray-35;
+            
+                @include breakpoint-up(large) {
+                    border-top: none;
+                }
+            }
+
+            &.active {
+                color: $color-neutral-black-80;
+            }
+            
+            .red-line {
+                width: 40%;
+                height: 4px;
+                position: absolute;
+                inset: auto calc((100% - 40%) / 2) -1px;
+                background-color: $color-primary-red;
+                opacity: 0;
+                
+                @include breakpoint-up(large) {
+                    width: 100%;
+                    inset-inline: 0;
+                }
+            }
+        }
+    }
+
+    &__detail {
+        padding-block: 4.5rem 4.75rem;
+        display: grid;
+        gap: 2.5rem;
+        align-items: center;
+
+        @include breakpoint-up(large) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-image {
+            position: relative;
+            padding-bottom: 2.5rem;
+
+            @include breakpoint-up(large) {
+                padding-bottom: 6rem;
+            }
+
+            .img-container {
+                width: min(100%, 34rem);
+                position: relative;
+                
+                img {
+                    height: 12.5rem;
+                    display: block;
+                    margin-left: auto;
+
+                    opacity: 0;
+
+                    @include breakpoint-up(large) {
+                        height: 100%;
+                    }
+
+                    &:nth-child(n + 2) {
+                        position: absolute;
+                        inset: 0 0 auto;
+                    }
+
+                    &:nth-child(2) {
+                        height: 120%;
+                    }
+
+                    &:nth-child(3) {
+                        height: 110%;
+                        padding-right: 1.3125rem;
+
+                        @include breakpoint-up(large) {
+                            padding-right: 2.25rem;
+                        }
+                    }
+                }
+            }
+    
+            .image__bg--features {
+                left: -13%;
+                border-radius: 0 25rem 25rem 0;
+                
+                @include breakpoint-up(large) {
+                    left: -35%;
+                }
+            }
+        }
+
+        &-text {
+            width: min(100%, 28rem);
+            margin-left: auto;
+            position: relative;
+
+            @include breakpoint-up(large) {
+                text-align: left;
+                padding-bottom: 3rem;
+            }
+
+            .detail-item {
+                opacity: 0;
+
+                &:nth-child(n + 2) {
+                    position: absolute;
+                    inset: 0 0 auto;    
+                }
+            }
+
+            .btn--features {
+                @include breakpoint-down(large) {
+                    display: none;
+                }
+            }
+        }
+    } 
+}
