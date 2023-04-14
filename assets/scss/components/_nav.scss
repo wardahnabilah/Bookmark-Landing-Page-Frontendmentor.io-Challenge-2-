@@ -1,0 +1,26 @@
+@use '../abstract' as *;
+
+.navigation-bar {
+    padding-block: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+        &__list {
+            display: flex;
+            align-items: center;
+
+            .nav__item {
+                padding-inline: 1.375rem; //22px
+
+                &.social-media {
+                    img {
+                        padding-inline: 1.25rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

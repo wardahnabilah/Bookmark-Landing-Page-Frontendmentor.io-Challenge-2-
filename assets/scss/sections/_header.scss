@@ -2,10 +2,6 @@
 
 .header {
     width: 100%;
-    padding-block: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     inset: 0 0 auto;
     z-index: 9999;
@@ -13,13 +9,19 @@
     transition: background-color .5s ease-in;
 
     .main-logo {
-        position: relative;
-
-        &-white {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
+        
+        // Change the color of main logo when open the navigation
+        .bookmark-logo {
+            &.show {
+                fill: $color-neutral-white;
+            }
+            &-small {
+                &.show {
+                    fill: $color-neutral-dark-blue-95;
+                }
+            }
         }
+        
     }
 
     .toggle {
@@ -43,15 +45,10 @@
 
     .nav {
         &__list {
-            display: flex;
-            align-items: center;
-            gap: 2.75rem;
-
-            // nav__list style for smaller screen (mobile)
+            // nav__list styles for smaller screen (mobile)
             @include breakpoint-down(large) {
                 height: 100vh;
                 flex-direction: column;
-                gap: 0;
                 position: absolute;
                 inset: 6.5625rem 0 auto;
                 background-color: $color-neutral-dark-blue-95;
@@ -61,23 +58,29 @@
             }
 
             .nav__item {
-
+                
+                // nav__item styles for smaller screen
                 @include breakpoint-down(large) {
                     width: calc(100% - (2*9.5%));
                     padding-block: 1.5rem;
                     text-align: center;
                     border-top: 1px solid $color-neutral-white-20;
                 }
-            }
+                
+                &.btn-login {
+                    padding-right: 0;
+                }
 
-            .nav__social-media {
-                display: none;
+                &.social-media {
+                    display: none;
 
-                @include breakpoint-down(large) {
-                    display: flex;
-                    gap: 2.5rem;
-                    margin-top: auto;
-                    padding-bottom: 3rem;
+                    // show social media icon on smaller screen
+                    @include breakpoint-down(large) {
+                        margin-top: auto;
+                        padding-bottom: 3rem;
+                        display: block;
+                        border-top: none;
+                    }
                 }
             }
         }
