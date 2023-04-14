@@ -63,3 +63,27 @@ faqItems.forEach(item => {
         arrowIcon.classList.toggle("open")
     })
 })
+
+/*******************************************************************
+                        CONTACT US SECTION
+********************************************************************/
+
+const input = document.querySelector(".input input") //select input field
+const alerts = document.querySelectorAll("[data-alert]") //select all alerts item (alert icon and alert text)
+
+input.addEventListener("input", () => {
+    // If the input is valid email
+    if(input.validity.valid) {
+        // Hide the alerts (add hide class)
+        alerts.forEach(alert => {
+            alert.classList.add("hide")
+        })
+    } 
+    // If the input is not valid email
+    else if (!input.validity.valid) {
+        // Show the alerts (remove hide class)
+        alerts.forEach(alert => {
+            alert.classList.remove("hide")
+        })
+    }
+})
