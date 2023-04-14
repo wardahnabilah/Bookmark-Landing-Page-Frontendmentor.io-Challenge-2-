@@ -36,6 +36,7 @@
                 inset: auto calc((100% - 40%) / 2) -1px;
                 background-color: $color-primary-red;
                 opacity: 0;
+                transition: opacity .2s ease-in-out;
                 
                 @include breakpoint-up(large) {
                     width: 100%;
@@ -71,8 +72,8 @@
                     height: 12.5rem;
                     display: block;
                     margin-left: auto;
-
                     opacity: 0;
+                    transition: opacity .5s ease-in-out;
 
                     @include breakpoint-up(large) {
                         height: 100%;
@@ -120,6 +121,7 @@
 
             .detail-item {
                 opacity: 0;
+                transition: opacity .5s ease-in-out;
 
                 &:nth-child(n + 2) {
                     position: absolute;
