@@ -2,12 +2,14 @@
 
 .hero {
     padding-top: calc(6.5rem + 2.5rem);
+    padding-bottom: 2.5rem;
     display: grid;
     gap: 3rem;
     overflow-x: hidden;
 
     @include breakpoint-up(large) {
         grid-template-columns: 1fr 1fr;
+        text-align: left;
     }
 
     &__image {
@@ -30,14 +32,8 @@
             }
         }
 
-        .image__bg {
-            width: max(100%, 19rem);
-            height: max(75%, 12rem);
-            position: absolute;
-            bottom: 0;
+        .image__bg--hero {
             right: -13%;
-            z-index: -1;
-            background-color: $color-primary-blue;
             border-radius: 25rem 0 0 25rem;
 
             @include breakpoint-up(large) {
