@@ -10,45 +10,69 @@
         margin-bottom: 2rem;
     }
 
-    &__form {
-        display: grid;
-        gap: 1rem;
+    &__send {
+        &.container-intro {
+            @include breakpoint-up(large) {
+                padding-inline: 3rem;
+            }
+        }
 
-        .input {
-            position: relative;
+        .contact__form {
+            display: grid;
+            gap: 1rem;
 
-            input {
-                width: 100%;
-                padding: 1em;
-                position: relative;
-                z-index: 1;
-                outline: none;
-                border: 2px solid transparent;
-                border-radius: 6px;
+            @include breakpoint-up(large) {
+                grid-auto-flow: column;
+            }
     
-                &::placeholder {
-                    color: $color-neutral-gray;
-                    opacity: .4;
+            .input {
+                position: relative;
+    
+                input {
+                    width: 100%;
+                    padding: .7em 1em;
+                    position: relative;
+                    z-index: 1;
+                    outline: none;
+                    border: 2px solid transparent;
+                    border-radius: 6px;
+
+                    @include breakpoint-up(large) {
+                        width: 19.125rem;
+                    }
+        
+                    &::placeholder {
+                        color: $color-neutral-gray;
+                        opacity: .4;
+                    }
+        
+                    &:invalid {
+                        border-color: $color-primary-red;
+                    }
                 }
     
-                &:invalid {
-                    border-color: $color-primary-red;
+                .alert-icon {
+                    position: absolute;
+                    inset: 1em 1em 1em auto;
+                    z-index: 2;
+                }
+        
+                .alert-text {
+                    padding: .7rem .75rem .45rem;
+                    position: relative;
+                    bottom: 4px;
+                    text-align: left;
+                    background-color: $color-primary-red;
+                    border-radius: 0 0 6px 6px;
                 }
             }
 
-            .alert-icon {
-                position: absolute;
-                inset: 1em 1em 1em auto;
-                z-index: 2;
-            }
-    
-            .alert {
-                padding: .7rem .75rem .45rem;
-                position: relative;
-                bottom: 4px;
-                text-align: left;
-                background-color: $color-primary-red;
-                border-radius: 0 0 6px 6px;
+            button {
+                
+                @include breakpoint-up(large) {
+                    width: 7.8rem;
+                    height: 3.0625rem;
+                }
             }
         }
     }
