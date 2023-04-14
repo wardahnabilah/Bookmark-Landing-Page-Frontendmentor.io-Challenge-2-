@@ -15,8 +15,6 @@ function toggleNavigation() {
     navComponent.forEach(component => {
         component.classList.toggle("show")
     })
-
-    console.log(navComponent);
 }
 
 /* Showing and Hiding navigation when scrolling */
@@ -29,6 +27,11 @@ window.addEventListener("scroll", () => {
     // If current position > previous position (scroll down), hide the navigation
     if (currentPosition > prevPosition) {
         header.classList.add("hide")
+        
+        header.classList.remove("changeBgColor")
+        navComponent.forEach(component => {
+            component.classList.remove("show")
+        })
     } 
     // If current position < previous position (scroll up), show the navigation
     else if (currentPosition < prevPosition || prevPosition === 0) {

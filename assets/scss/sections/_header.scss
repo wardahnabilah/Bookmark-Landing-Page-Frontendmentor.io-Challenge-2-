@@ -7,7 +7,7 @@
     z-index: 9999;
     background-color: $color-neutral-white;
     transform: translateY(0);
-    transition: background-color .5s ease-in, transform .5s ease, opacity .5s ease;
+    transition: background-color .2s ease-in, transform .5s ease, opacity .5s ease-in;
 
     &.hide {
         transform: translateY(-100%);
@@ -53,14 +53,19 @@
         &__list {
             // nav__list styles for smaller screen (mobile)
             @include breakpoint-down(large) {
-                height: 100vh;
+                height: calc(100vh - 6.5625rem);
                 flex-direction: column;
                 position: absolute;
                 inset: 6.5625rem 0 auto;
                 background-color: $color-neutral-dark-blue-95;
+                transform: translateY(-35%);
                 opacity: 0;
                 pointer-events: none;
-                transition: opacity .5s ease-in;
+                transition: opacity .2s ease-in-out, transform .4s ease-in-out;
+            }
+
+            &.show {
+                transform: translateY(0);
             }
 
             .nav__item {
