@@ -55,6 +55,10 @@
                     position: absolute;
                     inset: 1em 1em 1em auto;
                     z-index: 2;
+
+                    &.hide {
+                        display: none;
+                    }
                 }
         
                 .alert-text {
@@ -64,6 +68,10 @@
                     text-align: left;
                     background-color: $color-primary-red;
                     border-radius: 0 0 6px 6px;
+
+                    &.hide {
+                        display: none;
+                    }
                 }
             }
 
