@@ -6,7 +6,13 @@
     inset: 0 0 auto;
     z-index: 9999;
     background-color: $color-neutral-white;
-    transition: background-color .5s ease-in;
+    transform: translateY(0);
+    transition: background-color .5s ease-in, transform .5s ease, opacity .5s ease;
+
+    &.hide {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 
     .main-logo {
         

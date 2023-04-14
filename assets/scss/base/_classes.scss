@@ -16,11 +16,6 @@
     padding-bottom: 1.25rem;
 }
 
-.hide {
-    opacity: 0;
-    pointer-events: none;
-}
-
 .show, .active {
     opacity: 1 !important;
     pointer-events: auto !important;

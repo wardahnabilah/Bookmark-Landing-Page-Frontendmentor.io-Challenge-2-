@@ -2,7 +2,7 @@
                             HEADER SECTION
 ********************************************************************/
 
-/* Showing and hiding navigation */
+/* Showing and hiding navigation on click (mobile) */
 
 const toggle = document.querySelector(".toggle")
 const navComponent = document.querySelectorAll("[data-navigation]")
@@ -18,6 +18,26 @@ function toggleNavigation() {
 
     console.log(navComponent);
 }
+
+/* Showing and Hiding navigation when scrolling */
+
+let prevPosition = 0
+
+window.addEventListener("scroll", () => {
+    let currentPosition = window.scrollY
+    
+    // If current position > previous position (scroll down), hide the navigation
+    if (currentPosition > prevPosition) {
+        header.classList.add("hide")
+    } 
+    // If current position < previous position (scroll up), show the navigation
+    else if (currentPosition < prevPosition || prevPosition === 0) {
+        header.classList.remove("hide")
+    }
+
+    // store the current position in prev position, to track the previous position
+    prevPosition = currentPosition
+})
 
 /*******************************************************************
                             FEATURES SECTION
