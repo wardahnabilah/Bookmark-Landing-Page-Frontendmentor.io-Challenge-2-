@@ -216,16 +216,22 @@
     </section>
 
     <!-- ============ Contact Us Section =========== -->
-    <section class="contact" id="contact">
-      <div class="contact__caption">
-        35,000+ already joined
-      </div>
-      <div class="contact__send">
-        <h3>Stay up-to-date with what we’re doing</h3>
-        <form action="" class="contact__form">
-          <input type="text" placeholder="Enter your email address">
-          <button type="submit" class="btn btn--primary-red">Contact Us</button>
-        </form>
+    <section id="contact">
+      <div class="container contact">
+        <div class="contact__caption">
+          35,000+ already joined
+        </div>
+        <div class="contact__send">
+          <h3>Stay up-to-date with what we’re doing</h3>
+          <form action="" class="contact__form">
+            <div class="input">
+              <input type="email" placeholder="Enter your email address">
+              <img class="alert-icon hide" data-alert src="./assets/images/icon-error.svg" alt="">
+              <div class="alert-text hide" data-alert>Whoops, make sure it's an email</div>
+            </div>
+            <button type="submit" class="btn btn--primary-red">Contact Us</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>

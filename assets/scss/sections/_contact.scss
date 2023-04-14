@@ -1,0 +1,55 @@
+@use '../abstract' as *;
+
+.contact {
+    padding-block: 4.375rem 3.75rem;
+    background-color: $color-primary-blue;
+    color: $color-neutral-white;
+
+    h3 {
+        color: $color-neutral-white;
+        margin-bottom: 2rem;
+    }
+
+    &__form {
+        display: grid;
+        gap: 1rem;
+
+        .input {
+            position: relative;
+
+            input {
+                width: 100%;
+                padding: 1em;
+                position: relative;
+                z-index: 1;
+                outline: none;
+                border: 2px solid transparent;
+                border-radius: 6px;
+    
+                &::placeholder {
+                    color: $color-neutral-gray;
+                    opacity: .4;
+                }
+    
+                &:invalid {
+                    border-color: $color-primary-red;
+                }
+            }
+
+            .alert-icon {
+                position: absolute;
+                inset: 1em 1em 1em auto;
+                z-index: 2;
+            }
+    
+            .alert {
+                padding: .7rem .75rem .45rem;
+                position: relative;
+                bottom: 4px;
+                text-align: left;
+                background-color: $color-primary-red;
+                border-radius: 0 0 6px 6px;
+            }
+        }
+    }
+}
