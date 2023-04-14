@@ -65,6 +65,7 @@ p {
 
     &--footer {
         font-size: $fs-15;
+        color: $color-neutral-white;
 
         @include breakpoint-up(large) {
             font-size: $fs-13;
