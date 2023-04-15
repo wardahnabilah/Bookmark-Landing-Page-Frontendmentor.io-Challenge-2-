@@ -25,6 +25,11 @@
                 }
             }
 
+            &:hover {
+                color: $color-primary-red;
+                cursor: pointer;
+            }
+
             &.active {
                 color: $color-neutral-black-80;
             }

@@ -15,8 +15,17 @@
                 padding-inline: 1.375rem; //22px
 
                 &.social-media {
-                    img {
-                        padding-inline: 1.25rem;
+                    
+                    svg {
+                        margin-inline: 1.25rem;
+
+                        &:hover {
+                            cursor: pointer;
+                            
+                            path {
+                                fill: $color-primary-red;
+                            }
+                        }
                     }
                 }
 

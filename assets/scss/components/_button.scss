@@ -3,6 +3,7 @@
 .btn {
     padding: 1em;
     outline: none;
+    box-shadow: 0 9px 6px -6px $color-neutral-gray-35;
     border: 2px solid transparent;
     border-radius: 6px;
 
@@ -13,24 +14,52 @@
     &--primary-blue {
         background-color: $color-primary-blue;
         color: $color-neutral-white;
+
+        &:hover {
+            background-color: $color-neutral-white;
+            color: $color-primary-blue;
+            border: 2px solid $color-primary-blue;
+            cursor: pointer;
+        }
     }
 
     &--primary-red {
         background-color: $color-primary-red;
         color: $color-neutral-white;
+
+        &:hover {
+            background-color: $color-neutral-white;
+            color: $color-primary-red;
+            border: 2px solid $color-primary-red;
+            cursor: pointer;
+        }
     }
 
     &--secondary {
         background-color: $color-neutral-white-gray;
         color: $color-neutral-dark-gray;
-        box-shadow: 0 9px 6px -6px $color-neutral-gray-35; 
+        
+        &:hover {
+            background-color: $color-neutral-white;
+            border: 2px solid $color-neutral-dark-gray;
+            cursor: pointer;
+        }
     }
 
     &--login {
         padding: 1em 2.5em;
         background-color: $color-primary-red;
         color: $color-neutral-white;
+        box-shadow: 0 9px 6px -6px $color-neutral-gray-35;
+        border: 2px solid transparent;
         border-radius: 6px;
+
+        &:hover {
+            background-color: $color-neutral-white;
+            color: $color-primary-red;
+            border: 2px solid $color-primary-red;
+            cursor: pointer;
+        }
 
         @include breakpoint-down(large) {
             display: block;
