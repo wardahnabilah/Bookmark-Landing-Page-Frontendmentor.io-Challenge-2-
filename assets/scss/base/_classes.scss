@@ -33,9 +33,13 @@
 /* Blue background behind image */
 .image__bg {
     width: 100%;
-    height: clamp(12.5rem, 50vw, 21rem);
+    height: 80%;
+    margin-top: 3rem;
     position: absolute;
-    bottom: 0;
     z-index: -1;
     background-color: $color-primary-blue;
+
+    @include breakpoint-up(large) {
+        margin-top: 5rem;
+    }
 }

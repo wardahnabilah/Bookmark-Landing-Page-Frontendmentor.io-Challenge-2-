@@ -5,6 +5,7 @@
     padding-bottom: 2.5rem;
     display: grid;
     gap: 3rem;
+    align-items: center;
     overflow-x: hidden;
 
     @include breakpoint-up(large) {
@@ -14,6 +15,8 @@
 
     &__image {
         position: relative;
+        width: 100%;
+        height: max-content;
 
         @include breakpoint-up(large) {
             grid-column: 2 / 3;
@@ -21,23 +24,25 @@
         }
 
         img {
-            width: 114%;
-            position: relative;
-            top: -.375rem;
-            right: 1.375rem;
+            width: 100%;
+            max-width: 24rem;
 
             @include breakpoint-up(large) {
-                width: max(36rem, 125%);
-                right: 1.325rem;
+                width: 125%;
+                max-width: 40rem;
             }
         }
 
         .image__bg--hero {
-            right: -13%;
+            right: -13vw;
             border-radius: 25rem 0 0 25rem;
 
+            @include breakpoint-up(medium) {
+                right: -25vw;
+            }
+
             @include breakpoint-up(large) {
-                right: -35%;
+                right: -14vw;
             }
         }
     }

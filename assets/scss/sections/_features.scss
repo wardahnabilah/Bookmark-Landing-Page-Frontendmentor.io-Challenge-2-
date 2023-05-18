@@ -72,11 +72,17 @@
             .img-container {
                 width: min(100%, 34rem);
                 position: relative;
+                margin-inline: auto;
                 
+                @include breakpoint-up(large) {
+                    margin-inline: 0;
+                    margin-left: auto;
+                }
+
                 img {
                     height: 12.5rem;
                     display: block;
-                    margin-left: auto;
+                    margin-inline: auto;
                     opacity: 0;
                     transition: opacity .5s ease-in-out;
 
@@ -105,11 +111,15 @@
             }
     
             .image__bg--features {
-                left: -13%;
+                left: -13vw;
                 border-radius: 0 25rem 25rem 0;
                 
+                @include breakpoint-up(medium) {
+                    left: -25vw;
+                }
+
                 @include breakpoint-up(large) {
-                    left: -35%;
+                    left: -14vw;
                 }
             }
         }
